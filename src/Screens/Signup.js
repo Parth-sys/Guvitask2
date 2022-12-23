@@ -81,7 +81,7 @@ useEffect(()=>{
                   { password !== confirmpassword ? (<Error error="password not maching"></Error>) :(<></>) }
                    
            </div>
-           <a href="/login">alredy have an account? Click here to Login</a>
+           <a href="/Login">alredy have an account? Click here to Login</a>
          </div>
 
         </div>
