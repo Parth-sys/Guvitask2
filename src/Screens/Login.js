@@ -91,7 +91,7 @@ const navigate=useNavigate()
                                {loading && (<Loading></Loading>) }
                  </form>
                   
-                 <a href="/" style={{color:"black"}}> Click here to Signup</a>
+                
            </div>
          </div>
 
