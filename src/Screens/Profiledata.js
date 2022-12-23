@@ -8,22 +8,24 @@ function Profiledata(){
 const [data2,setdata2]=useState([]);
 
 
-const data = localStorage.getItem('currentuser')
-  const data1 = JSON.parse(data)
-  const email = data1.email
 
 useEffect(()=>{
-
-    getdata()
+    
+    const getdata= async()=>{
+        const data = localStorage.getItem('currentuser')
+          const data1 = JSON.parse(data)
+          const email = data1.email
+      
+        const resp=await axios.get(`http://localhost:5000/data/${email}`)
+           console.log(resp)
+         setdata2(resp.data);
+    
+    }
+   
+    getdata();
 
 },[])
 
-const getdata= async()=>{
-    const resp=await axios.get(`http://localhost:5000/data/${email}`)
-       console.log(resp)
-     setdata2(resp.data);
-
-}
 
 
 
